@@ -96,12 +96,19 @@
         <artifactId>maven-dependency-plugin</artifactId>
         <executions>
           <execution>
-            <phase>prepare-package</phase>
+            <phase>package</phase>
             <goals>
-              <goal>copy-dependencies</goal>
+              <goal>copy</goal>
             </goals>
             <configuration>
               <outputDirectory>${project.build.directory}/../../keycloak/providers</outputDirectory>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.springframework.security</groupId>
+                  <artifactId>spring-security-crypto</artifactId>
+                  <version>6.3.3</version>
+                </artifactItem>
+              </artifactItems>
             </configuration>
           </execution>
         </executions>
