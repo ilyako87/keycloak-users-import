@@ -9,7 +9,6 @@ services:
       KEYCLOAK_DATABASE_VENDOR: dev-file
       KEYCLOAK_EXTRA_ARGS: "--import-realm"
       KEYCLOAK_PROVIDERS_DIR: /opt/bitnami/keycloak/providers
-      KEYCLOAK_LOG_LEVEL: DEBUG
     volumes:
       - ./import:/opt/bitnami/keycloak/data/import
       - ./providers:/opt/bitnami/keycloak/providers
