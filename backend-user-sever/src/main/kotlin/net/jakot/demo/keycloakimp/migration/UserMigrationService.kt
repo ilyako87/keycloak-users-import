@@ -36,7 +36,7 @@ class UserMigrationService(
                 ))
             )
             keycloakClient.createUser(keycloakUser)
-            logger.info("Created user: $keycloakUser")
+            logger.info("Migrated user: $keycloakUser")
         }
     }
 
